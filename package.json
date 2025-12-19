@@ -7,11 +7,12 @@
     "build:css": "sass --load-path=node_modules frontend/scss/main.scss app/static/css/main.css --no-source-map",
     "build:js": "esbuild frontend/js/main.js --bundle --minify --outfile=app/static/js/main.js",
     "build:icons": "rm -rf app/static/fonts && mkdir -p app/static/fonts app/static/css && cp node_modules/bootstrap-icons/font/bootstrap-icons.* app/static/fonts/ && cp node_modules/bootstrap-icons/font/bootstrap-icons.css app/static/css/bootstrap-icons.css",
-    "dev": "npm-run-all --parallel dev:css dev:js",
+    "dev": "npm-run-all build:icons --parallel dev:css dev:js",
     "dev:css": "sass --load-path=node_modules --watch frontend/scss/main.scss app/static/css/main.css",
     "dev:js": "esbuild frontend/js/main.js --bundle --sourcemap --outfile=app/static/js/main.js --watch"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3"
   },
