@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="row align-items-center mb-5">
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold mb-3">{{ hero_title }}</h1>
+      <p class="lead text-secondary">{{ hero_lead }}</p>
+      <div class="d-flex gap-2">
+        <a class="btn btn-primary" href="https://github.com/WildcatZack/fastapi-jinja-bootstrap-starter" target="_blank" rel="noreferrer">View on GitHub</a>
+        <a class="btn btn-outline-primary" href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer">FastAPI Docs</a>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center">
+      <div class="card shadow-sm border-0">
+        <div class="card-body py-4">
+          <p class="text-uppercase text-secondary fw-semibold small mb-2">Stack preview</p>
+          <ul class="list-group list-group-flush text-start">
+            <li class="list-group-item d-flex align-items-center gap-2">
+              <i class="bi bi-lightning-charge-fill text-warning"></i>
+              <span>FastAPI app with Jinja2 templating</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-2">
+              <i class="bi bi-code-square text-primary"></i>
+              <span>Bootstrap 5 styles and components</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-2">
+              <i class="bi bi-boxes text-success"></i>
+              <span>Docker Compose for dev (reload) and prod</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row g-4">
+      {% for feature in features %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <i class="bi {{ feature.icon }} text-primary fs-4"></i>
+              <h2 class="h5 mb-0">{{ feature.title }}</h2>
+            </div>
+            <p class="text-secondary mb-0">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

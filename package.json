@@ -1,0 +1,23 @@
+{
+  "name": "fastapi-jinja-bootstrap-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:icons",
+    "build:css": "sass frontend/scss/main.scss app/static/css/main.css --no-source-map",
+    "build:js": "esbuild frontend/js/main.js --bundle --minify --outfile=app/static/js/main.js",
+    "build:icons": "rm -rf app/static/fonts && mkdir -p app/static/fonts app/static/css && cp node_modules/bootstrap-icons/font/bootstrap-icons.* app/static/fonts/ && cp node_modules/bootstrap-icons/font/bootstrap-icons.css app/static/css/bootstrap-icons.css",
+    "dev": "npm-run-all --parallel dev:css dev:js",
+    "dev:css": "sass --watch frontend/scss/main.scss app/static/css/main.css",
+    "dev:js": "esbuild frontend/js/main.js --bundle --sourcemap --outfile=app/static/js/main.js --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.6"
+  }
+}

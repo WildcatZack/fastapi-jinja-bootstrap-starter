@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - UVICORN_RELOAD=true
+    depends_on:
+      - assets
+
+  assets:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+
+  app-prod:
+    build:
+      context: .
+      target: prod
+    ports:
+      - "8000:8000"
+    profiles:
+      - production
+    environment:
+      - UVICORN_RELOAD=false
+
+volumes:
+  node_modules:

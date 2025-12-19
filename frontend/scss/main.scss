@@ -1,0 +1,30 @@
+// Theme overrides
+$primary: #4f46e5;
+$secondary: #6b7280;
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$body-bg: #f8f9fc;
+$body-color: #111827;
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+.hero-gradient {
+  background: linear-gradient(135deg, #4f46e5 0%, #a855f7 100%);
+  color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 45px rgba(79, 70, 229, 0.25);
+}
+
+.feature-icon {
+  background-color: rgba(79, 70, 229, 0.1);
+  color: $primary;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.footer-note {
+  color: $secondary;
+}

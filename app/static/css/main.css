@@ -1,0 +1,16 @@
+/* Built CSS output. Replace by running `npm run build` to compile Bootstrap + custom theme. */
+:root {
+  --bs-primary-rgb: 13, 110, 253;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
