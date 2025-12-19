@@ -37,6 +37,41 @@ npm run build
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+## Troubleshooting broken CSS/JS
+
+If the navbar toggle, icons, or layout look unstyled, the compiled assets likely
+weren't generated. Grab these quick diagnostics so we can pinpoint the issue:
+
+1. Check whether the dev asset watcher produced the files (look for the copy and
+   watch steps completing):
+
+   ```bash
+   docker compose logs assets --tail=50
+   docker compose logs assets --follow
+   ```
+
+2. Confirm the compiled outputs exist and aren't placeholders (placeholder files
+   are only a few lines long):
+
+   ```bash
+   ls -lh app/static/css app/static/js app/static/fonts
+   head -n 8 app/static/css/main.css
+   head -n 8 app/static/js/main.js
+   head -n 8 app/static/css/bootstrap-icons.css
+   ```
+
+3. If the assets are missing or still placeholders, rerun the build and capture
+   the logs:
+
+   ```bash
+   npm run build
+   # or inside Docker: docker compose run --rm assets npm run build
+   ```
+
+Sharing the logs from steps 1–3 will make it straightforward to see whether the
+Sass/esbuild pipeline finished and whether the icon fonts were copied into
+`app/static/fonts`.
+
 ## Project structure
 - `app/main.py`: FastAPI app wiring templates, static files, and the demo route
 - `app/templates/`: Jinja templates with `base.html`, navbar partial, and `index.html`
