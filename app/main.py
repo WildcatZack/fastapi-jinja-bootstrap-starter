@@ -47,6 +47,8 @@ async def warn_if_static_not_built() -> None:
         if marker in head:
             placeholders.append(str(path))
 
+    app.state.static_placeholders = bool(missing or placeholders)
+
     if missing or placeholders:
         log.warning(
             "Static assets need a frontend build. Missing: %s; placeholders: %s. "
@@ -62,6 +64,7 @@ async def index(request: Request) -> HTMLResponse:
     context = {
         "request": request,
         "page_title": "Welcome",
+        "use_cdn_assets": getattr(app.state, "static_placeholders", False),
         "hero_title": "FastAPI × Jinja × Bootstrap",
         "hero_lead": (
             "A ready-to-use starter with Dockerized development and production builds. "

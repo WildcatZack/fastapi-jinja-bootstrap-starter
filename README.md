@@ -68,6 +68,13 @@ weren't generated. Grab these quick diagnostics so we can pinpoint the issue:
    # or inside Docker: docker compose run --rm assets npm run build
    ```
 
+If you need to keep working while the assets are missing, the app will
+automatically fall back to CDN-hosted Bootstrap CSS/JS and icons whenever the
+committed placeholders are detected. This keeps the navbar toggle and icons
+functional while you gather the build logs above. Once your local build
+completes, those CDN links will be skipped in favor of the compiled files under
+`app/static`.
+
 Sharing the logs from steps 1–3 will make it straightforward to see whether the
 Sass/esbuild pipeline finished and whether the icon fonts were copied into
 `app/static/fonts`.
