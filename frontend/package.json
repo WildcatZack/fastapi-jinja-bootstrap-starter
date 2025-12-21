@@ -11,12 +11,12 @@
     "dev": "concurrently -k -n css,js \"npm:dev:css\" \"npm:dev:js\""
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3"
+    "@popperjs/core": "2.11.8",
+    "bootstrap": "5.3.3"
   },
   "devDependencies": {
-    "concurrently": "^9.0.1",
-    "esbuild": "^0.21.5",
-    "sass": "^1.77.6"
+    "concurrently": "9.0.1",
+    "esbuild": "0.21.5",
+    "sass": "1.77.6"
   }
 }
