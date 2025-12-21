@@ -6,7 +6,7 @@ WORKDIR /build/frontend
 # Ensure backend static directory exists for build outputs
 RUN mkdir -p /build/app/static
 
-COPY frontend/package*.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
 
 COPY frontend/ .
