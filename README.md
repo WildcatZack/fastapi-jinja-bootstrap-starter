@@ -11,6 +11,15 @@
    ```
 3. Open http://127.0.0.1:8000/ in your browser.
 
+## Development
+
+- Build and start dev containers:
+  ```bash
+  docker compose up --build
+  ```
+- `api`: FastAPI with reload on port 8000.
+- `assets`: Node watcher that rebuilds frontend assets into `app/static/`.
+
 ## Production image
 
 Build the production image with compiled assets:
