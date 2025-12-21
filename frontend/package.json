@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:css": "sass src/styles.scss ../app/static/app.css",
+    "build:css": "sass --load-path=node_modules src/styles.scss ../app/static/app.css",
     "build:js": "esbuild src/index.js --bundle --outfile=../app/static/app.js",
     "build": "npm run build:css && npm run build:js",
-    "dev:css": "sass --watch src/styles.scss ../app/static/app.css",
+    "dev:css": "sass --load-path=node_modules --watch src/styles.scss:../app/static/app.css",
     "dev:js": "esbuild src/index.js --bundle --outfile=../app/static/app.js --watch",
     "dev": "npm run dev:css & npm run dev:js"
   },
