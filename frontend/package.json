@@ -6,7 +6,7 @@
     "build:css": "sass --load-path=node_modules src/styles.scss ../app/static/app.css",
     "build:js": "esbuild src/index.js --bundle --outfile=../app/static/app.js",
     "build": "npm run build:css && npm run build:js",
-    "dev:css": "sass --load-path=node_modules --watch src/styles.scss:../app/static/app.css",
+    "dev:css": "sass --load-path=node_modules --watch --poll src/styles.scss:../app/static/app.css",
     "dev:js": "esbuild src/index.js --bundle --outfile=../app/static/app.js --watch",
     "dev": "concurrently -k -n css,js \"npm:dev:css\" \"npm:dev:js\""
   },
