@@ -8,13 +8,14 @@
     "build": "npm run build:css && npm run build:js",
     "dev:css": "sass --load-path=node_modules --watch src/styles.scss:../app/static/app.css",
     "dev:js": "esbuild src/index.js --bundle --outfile=../app/static/app.js --watch",
-    "dev": "npm run dev:css & npm run dev:js"
+    "dev": "concurrently -k -n css,js \"npm:dev:css\" \"npm:dev:js\""
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "esbuild": "^0.21.5",
     "sass": "^1.77.6"
   }
