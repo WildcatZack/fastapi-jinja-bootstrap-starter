@@ -33,3 +33,15 @@ docker run -p 8000:8000 <name>
 ```
 
 The production image bakes in frontend assets and does not require Node at runtime.
+
+## Verification
+
+- Development loop:
+  - `docker compose up --build`
+  - Edit `frontend/src/styles.scss` to rebuild `app/static/app.css`.
+  - Edit `frontend/src/index.js` to rebuild `app/static/app.js`.
+  - Updates to `app/templates/` render on refresh without restarting the server.
+- Production check:
+  - `docker build -t <name> .`
+  - `docker run -p 8000:8000 <name>`
+  - Confirm `http://127.0.0.1:8000/static/app.css` returns HTTP 200.
