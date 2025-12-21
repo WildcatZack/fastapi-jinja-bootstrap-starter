@@ -11,6 +11,11 @@
    ```
 3. Open http://127.0.0.1:8000/ in your browser.
 
+## UI proof
+
+- Visit `/` to see the Bootstrap navbar, alert, and card components.
+- Click `About` or `Docs` (`/about`, `/docs-page`) to confirm the active nav state updates.
+
 ## Development
 
 - Build and start dev containers:

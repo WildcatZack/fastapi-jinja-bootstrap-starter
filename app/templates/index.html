@@ -3,8 +3,35 @@
 {% block title %}Home | FastAPI Starter{% endblock %}
 
 {% block content %}
-  <div class="text-center">
+  <div class="mb-4 text-center">
     <h1 class="mb-3">FastAPI + Jinja2 + Bootstrap</h1>
     <p class="lead">Starter project is up and running.</p>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    Bootstrap styles are loaded correctly. This is a success alert to prove it.
+  </div>
+
+  <div class="row g-4 align-items-stretch">
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Starter Card</h5>
+          <p class="card-text">Use this card to stash quick notes or links as you iterate.</p>
+          <a class="btn btn-primary" href="/docs-page">View Docs</a>
+          <a class="btn btn-outline-secondary ms-2" href="/about">About this starter</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="p-4 bg-light border rounded h-100">
+        <h6 class="text-uppercase text-muted">Next steps</h6>
+        <ul class="mb-0">
+          <li>Update templates to match your project branding.</li>
+          <li>Wire real data into the views.</li>
+          <li>Adjust the navbar links once routes are finalized.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 {% endblock %}

@@ -12,4 +12,20 @@ templates = Jinja2Templates(directory="app/templates")
 
 @app.get("/", response_class=HTMLResponse)
 def read_root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(
+        "index.html", {"request": request, "active_page": "home"}
+    )
+
+
+@app.get("/about", response_class=HTMLResponse)
+def read_about(request: Request):
+    return templates.TemplateResponse(
+        "about.html", {"request": request, "active_page": "about"}
+    )
+
+
+@app.get("/docs-page", response_class=HTMLResponse)
+def read_docs(request: Request):
+    return templates.TemplateResponse(
+        "docs.html", {"request": request, "active_page": "docs"}
+    )

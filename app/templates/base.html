@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}FastAPI Starter{% endblock %}</title>
     <link rel="stylesheet" href="/static/app.css" />
-    {% block head %}{% endblock %}
+    {% block head_extra %}{% endblock %}
   </head>
   <body>
+    {% include "partials/_navbar.html" %}
     <main class="container py-5">
       {% block content %}{% endblock %}
     </main>
     <script src="/static/app.js" defer></script>
-    {% block scripts %}{% endblock %}
   </body>
 </html>
