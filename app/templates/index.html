@@ -7,9 +7,10 @@
     <h1 class="mb-3">FastAPI + Jinja2 + Bootstrap</h1>
     <p class="lead mb-4">Starter project is up and running.</p>
     <div class="d-flex justify-content-center gap-2">
-      <a class="btn btn-primary" href="/?theme=kentucky">Preview Kentucky theme</a>
-      <a class="btn btn-outline-secondary" href="/?theme=default">Return to default</a>
+      <button class="btn btn-primary" type="button" data-theme-toggle>Toggle Kentucky theme</button>
+      <a class="btn btn-outline-secondary" href="/docs-page">Docs</a>
     </div>
+    <p class="text-muted small mt-2 mb-0">Theme choice is saved locally and reapplied on refresh.</p>
   </div>
 
   <div class="row g-4 align-items-stretch mb-4">
@@ -24,8 +25,8 @@
           <h5 class="card-title">Theme-ready navbar</h5>
           <p class="card-text">The navbar above inherits the theme variables for background, brand, and hover colors.</p>
           <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary" href="/{{ theme_query }}">Stay on this page</a>
-            <a class="btn btn-outline-secondary" href="/about{{ theme_query }}">Visit About</a>
+            <a class="btn btn-primary" href="/">Stay on this page</a>
+            <a class="btn btn-outline-secondary" href="/about">Visit About</a>
           </div>
         </div>
       </div>
@@ -38,8 +39,8 @@
         <div class="card-body">
           <h5 class="card-title">Starter Card</h5>
           <p class="card-text">Use this card to stash quick notes or links as you iterate.</p>
-          <a class="btn btn-primary" href="/docs-page{{ theme_query }}">View Docs</a>
-          <a class="btn btn-outline-secondary ms-2" href="/about{{ theme_query }}">About this starter</a>
+          <a class="btn btn-primary" href="/docs-page">View Docs</a>
+          <a class="btn btn-outline-secondary ms-2" href="/about">About this starter</a>
         </div>
       </div>
     </div>

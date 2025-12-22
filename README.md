@@ -15,7 +15,7 @@
 
 - Visit `/` to see the Bootstrap navbar, alert, and card components.
 - Click `About` or `Docs` (`/about`, `/docs-page`) to confirm the active nav state updates.
-- Add `?theme=kentucky` to any page to preview the Kentucky colorway (e.g., `/?theme=kentucky`). Drop the query string or use `?theme=default` to revert. The overrides are scoped to a class so Bootstrap's built-in light/dark modes stay intact.
+- Use the "Toggle theme" button in the navbar (or the hero buttons) to switch between the default palette and the Kentucky theme. The selection is persisted in `localStorage` under `preferred-theme` so it survives refreshes and restarts. Clear that key (or toggle again) to reset. Bootstrap's built-in light/dark modes remain intact because the overrides stay scoped to the optional theme class.
 
 ## Development
 

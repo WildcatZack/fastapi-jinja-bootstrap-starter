@@ -4,14 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}FastAPI Starter{% endblock %}</title>
+    <script>
+      (() => {
+        const STORAGE_KEY = "preferred-theme";
+        const stored = localStorage.getItem(STORAGE_KEY);
+        const theme = stored === "kentucky" ? "kentucky" : "default";
+        const root = document.documentElement;
+        root.dataset.themeChoice = theme;
+        root.classList.toggle("theme-kentucky", theme === "kentucky");
+
+        const applyToBody = () =>
+          document.body?.classList.toggle("theme-kentucky", theme === "kentucky");
+        if (document.body) {
+          applyToBody();
+        } else {
+          document.addEventListener("DOMContentLoaded", applyToBody, { once: true });
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="/static/app.css" />
     {% block head_extra %}{% endblock %}
   </head>
-  <body{% if theme_class %} class="{{ theme_class }}"{% endif %}>
+  <body>
     {% include "partials/_navbar.html" %}
     <main class="container py-5">
       {% block content %}{% endblock %}
     </main>
+    <script>
+      (() => {
+        const STORAGE_KEY = "preferred-theme";
+        const getNextTheme = () =>
+          document.documentElement.classList.contains("theme-kentucky")
+            ? "default"
+            : "kentucky";
+
+        const syncToggleLabels = (theme) => {
+          const label = theme === "kentucky" ? "Use default theme" : "Use Kentucky theme";
+          document.querySelectorAll("[data-theme-toggle]").forEach((el) => {
+            el.textContent = label;
+            el.setAttribute(
+              "aria-label",
+              label === "Use default theme" ? "Switch to default theme" : "Switch to Kentucky theme",
+            );
+          });
+        };
+
+        syncToggleLabels(document.documentElement.dataset.themeChoice);
+
+        document.addEventListener("click", (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          if (!target.closest("[data-theme-toggle]")) return;
+
+          event.preventDefault();
+          const nextTheme = getNextTheme();
+          localStorage.setItem(STORAGE_KEY, nextTheme);
+          window.location.reload();
+        });
+      })();
+    </script>
     <script src="/static/app.js" defer></script>
   </body>
 </html>
