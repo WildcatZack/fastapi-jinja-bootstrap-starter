@@ -15,13 +15,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link {% if active_page == 'home' %}active{% endif %}" href="/">Home</a>
+          <a class="nav-link {% if active_page == 'home' %}active{% endif %}" href="/{{ theme_query }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="/about">About</a>
+          <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="/about{{ theme_query }}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if active_page == 'docs' %}active{% endif %}" href="/docs-page">Docs</a>
+          <a class="nav-link {% if active_page == 'docs' %}active{% endif %}" href="/docs-page{{ theme_query }}">Docs</a>
         </li>
       </ul>
     </div>

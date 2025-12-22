@@ -5,11 +5,31 @@
 {% block content %}
   <div class="mb-4 text-center">
     <h1 class="mb-3">FastAPI + Jinja2 + Bootstrap</h1>
-    <p class="lead">Starter project is up and running.</p>
+    <p class="lead mb-4">Starter project is up and running.</p>
+    <div class="d-flex justify-content-center gap-2">
+      <a class="btn btn-primary" href="/?theme=kentucky">Preview Kentucky theme</a>
+      <a class="btn btn-outline-secondary" href="/?theme=default">Return to default</a>
+    </div>
   </div>
 
-  <div class="alert alert-success" role="alert">
-    Bootstrap styles are loaded correctly. This is a success alert to prove it.
+  <div class="row g-4 align-items-stretch mb-4">
+    <div class="col-md-6">
+      <div class="alert alert-success mb-0" role="alert">
+        Bootstrap styles are loaded correctly. Toggle the Kentucky theme to see colors swap while Bootstrap light/dark stays intact.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Theme-ready navbar</h5>
+          <p class="card-text">The navbar above inherits the theme variables for background, brand, and hover colors.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="/{{ theme_query }}">Stay on this page</a>
+            <a class="btn btn-outline-secondary" href="/about{{ theme_query }}">Visit About</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row g-4 align-items-stretch">
@@ -18,8 +38,8 @@
         <div class="card-body">
           <h5 class="card-title">Starter Card</h5>
           <p class="card-text">Use this card to stash quick notes or links as you iterate.</p>
-          <a class="btn btn-primary" href="/docs-page">View Docs</a>
-          <a class="btn btn-outline-secondary ms-2" href="/about">About this starter</a>
+          <a class="btn btn-primary" href="/docs-page{{ theme_query }}">View Docs</a>
+          <a class="btn btn-outline-secondary ms-2" href="/about{{ theme_query }}">About this starter</a>
         </div>
       </div>
     </div>

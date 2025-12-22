@@ -15,6 +15,7 @@
 
 - Visit `/` to see the Bootstrap navbar, alert, and card components.
 - Click `About` or `Docs` (`/about`, `/docs-page`) to confirm the active nav state updates.
+- Add `?theme=kentucky` to any page to preview the Kentucky colorway (e.g., `/?theme=kentucky`). Drop the query string or use `?theme=default` to revert. The overrides are scoped to a class so Bootstrap's built-in light/dark modes stay intact.
 
 ## Development
 
