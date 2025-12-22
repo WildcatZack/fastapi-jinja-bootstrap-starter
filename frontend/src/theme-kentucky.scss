@@ -38,3 +38,27 @@
   --bs-alert-bg: #f5e6b3;
   --bs-alert-border-color: #d3a625;
 }
+
+.theme-kentucky .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0033a0;
+  --bs-btn-border-color: #0033a0;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #002878;
+  --bs-btn-hover-border-color: #002878;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #002067;
+  --bs-btn-active-border-color: #002067;
+}
+
+.theme-kentucky .btn-outline-secondary {
+  --bs-btn-color: #1b140a;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #d3a625;
+  --bs-btn-hover-color: #1b140a;
+  --bs-btn-hover-bg: #d3a625;
+  --bs-btn-hover-border-color: #d3a625;
+  --bs-btn-active-color: #1b140a;
+  --bs-btn-active-bg: #b8901f;
+  --bs-btn-active-border-color: #b8901f;
+}
