@@ -1,64 +1,26 @@
+/* Kentucky Theme (incremental build) */
 .theme-kentucky {
-  --bs-body-bg: #fdf7e4;
-  --bs-body-color: #1b140a;
-
+  /* Core palette */
   --bs-primary: #0033a0;
   --bs-primary-rgb: 0, 51, 160;
   --bs-secondary: #d3a625;
-
-  --bs-link-color: #0033a0;
-  --bs-link-hover-color: #002878;
-
-  --bs-border-color: #e3d3a3;
-  --bs-card-bg: #fffdf5;
-  --bs-card-border-color: #e3d3a3;
-
-  --bs-navbar-bg: #13294b;
-  --bs-navbar-color: #fdf7e4;
-  --bs-navbar-hover-color: #d3a625;
-  --bs-navbar-brand-color: #fdf7e4;
-  --bs-navbar-brand-hover-color: #f9d875;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.35);
-
-  --bs-btn-primary-color: #fff;
-  --bs-btn-primary-bg: #0033a0;
-  --bs-btn-primary-border-color: #0033a0;
-  --bs-btn-primary-hover-bg: #002878;
-  --bs-btn-primary-hover-border-color: #002878;
-  --bs-btn-primary-active-bg: #002067;
-  --bs-btn-primary-active-border-color: #002067;
-
-  --bs-btn-outline-secondary-color: #1b140a;
-  --bs-btn-outline-secondary-border-color: #d3a625;
-  --bs-btn-outline-secondary-hover-bg: #d3a625;
-  --bs-btn-outline-secondary-hover-border-color: #d3a625;
-  --bs-btn-outline-secondary-hover-color: #1b140a;
-
-  --bs-alert-color: #1b140a;
-  --bs-alert-bg: #f5e6b3;
-  --bs-alert-border-color: #d3a625;
 }
 
+/* Force primary button styling under theme (POC reliability) */
 .theme-kentucky .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0033a0;
-  --bs-btn-border-color: #0033a0;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #002878;
-  --bs-btn-hover-border-color: #002878;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #002067;
-  --bs-btn-active-border-color: #002067;
+  background-color: #0033a0 !important;
+  border-color: #0033a0 !important;
+  color: #fff !important;
 }
 
-.theme-kentucky .btn-outline-secondary {
-  --bs-btn-color: #1b140a;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-color: #d3a625;
-  --bs-btn-hover-color: #1b140a;
-  --bs-btn-hover-bg: #d3a625;
-  --bs-btn-hover-border-color: #d3a625;
-  --bs-btn-active-color: #1b140a;
-  --bs-btn-active-bg: #b8901f;
-  --bs-btn-active-border-color: #b8901f;
+.theme-kentucky .btn-primary:hover {
+  background-color: #002878 !important;
+  border-color: #002878 !important;
+}
+
+.theme-kentucky .btn-primary:active,
+.theme-kentucky .btn-primary.active,
+.theme-kentucky .btn-primary.show {
+  background-color: #002067 !important;
+  border-color: #002067 !important;
 }
