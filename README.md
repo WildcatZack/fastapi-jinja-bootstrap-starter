@@ -17,6 +17,10 @@
 - Click `About` or `Docs` (`/about`, `/docs-page`) to confirm the active nav state updates.
 - Use the "Toggle theme" button in the navbar (or the hero buttons) to switch between the default palette and the Kentucky theme. The selection is persisted in `localStorage` under `preferred-theme` so it survives refreshes and restarts. Clear that key (or toggle again) to reset. Bootstrap's built-in light/dark modes remain intact because the overrides stay scoped to the optional theme class.
 
+## Styleguide
+
+- Visit `/styleguide` for a complete Bootstrap 5.3.x component and form coverage page. Use it to validate colors, typography, and JS-driven pieces (tooltips, toasts, popovers, scrollspy) against both the default and Kentucky themes.
+
 ## Development
 
 - Build and start dev containers:

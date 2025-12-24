@@ -32,3 +32,11 @@ def read_docs(request: Request):
         "docs.html",
         {"request": request, "active_page": "docs"},
     )
+
+
+@app.get("/styleguide", response_class=HTMLResponse)
+def read_styleguide(request: Request):
+    return templates.TemplateResponse(
+        "styleguide.html",
+        {"request": request, "active_page": "styleguide"},
+    )
