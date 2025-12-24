@@ -1,0 +1,398 @@
+{% extends "styleguide/styleguide_base.html" %}
+
+{% block title %}Styleguide Components | FastAPI Starter{% endblock %}
+
+{% block styleguide_header %}
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h1 class="mb-0">Components</h1>
+    <span class="badge text-bg-secondary">Complete coverage</span>
+  </div>
+  <p class="text-muted mb-4">Bootstrap components, including JavaScript-driven elements, using the existing initialization pattern.</p>
+{% endblock %}
+
+{% block styleguide_content %}
+  <section class="styleguide-section">
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Accordion</h5>
+            <div class="accordion" id="styleguideAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#styleguideAccordion">
+                  <div class="accordion-body">This is the first item's accordion body.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#styleguideAccordion">
+                  <div class="accordion-body">Second item's accordion body.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="card-title">Alerts &amp; badges</h5>
+              <span class="badge text-bg-dark">Badge</span>
+            </div>
+            <div class="alert alert-primary" role="alert">A simple primary alert.</div>
+            <div class="alert alert-warning" role="alert">Warning alert with <a href="#" class="alert-link">link</a>.</div>
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+              <div class="flex-grow-1">Success alert with close button.</div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <span class="badge text-bg-primary">Primary</span>
+              <span class="badge text-bg-secondary">Secondary</span>
+              <span class="badge text-bg-info">Info</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Breadcrumb &amp; pagination</h5>
+            <nav aria-label="breadcrumb" class="mb-3">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+            </nav>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination mb-0">
+                <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Buttons &amp; button groups</h5>
+            <div class="mb-3 d-flex gap-2 flex-wrap">
+              <button class="btn btn-primary" type="button">Primary</button>
+              <button class="btn btn-outline-secondary" type="button">Outline</button>
+              <button class="btn btn-success btn-sm" type="button">Small</button>
+              <button class="btn btn-danger" type="button" disabled>Disabled</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Left</button>
+              <button type="button" class="btn btn-secondary">Middle</button>
+              <button type="button" class="btn btn-secondary">Right</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Cards &amp; list groups</h5>
+            <div class="card mb-3">
+              <div class="card-header">Featured</div>
+              <div class="card-body">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Supporting text within a card.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item active" aria-current="true">Active item</li>
+              <li class="list-group-item">Second item</li>
+              <li class="list-group-item">Third item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="card-title">Carousel &amp; placeholders</h5>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div id="styleguideCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#styleguideCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#styleguideCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-primary)" class="opacity-50"></rect></svg>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide</h5>
+                    <p>Placeholder carousel content.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-success)" class="opacity-50"></rect></svg>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide</h5>
+                    <p>Another placeholder image.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#styleguideCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#styleguideCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p class="mb-0">Placeholder loading state:</p>
+            <div class="placeholder-glow">
+              <span class="placeholder col-12"></span>
+              <span class="placeholder col-8"></span>
+              <span class="placeholder col-6"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Collapse &amp; dropdowns</h5>
+            <p class="card-text">Toggle content using collapse and dropdown components.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <div class="dropdown">
+                <button
+                  class="btn btn-outline-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Toggle collapse</a>
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body mb-0">Collapsed content showcasing the collapse component.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Modal &amp; offcanvas</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#styleguideModal">Launch modal</button>
+              <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#styleguideOffcanvas" aria-controls="styleguideOffcanvas">Open offcanvas</button>
+            </div>
+            <div class="modal fade" id="styleguideModal" tabindex="-1" aria-labelledby="styleguideModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="styleguideModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">Modal body content for demonstration.</div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="styleguideOffcanvas" aria-labelledby="styleguideOffcanvasLabel">
+              <div class="offcanvas-header">
+                <h5 id="styleguideOffcanvasLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                This is offcanvas content using the data API.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Navs, tabs &amp; navbar</h5>
+            <ul class="nav nav-tabs mb-3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+              </li>
+            </ul>
+            <div class="tab-content mb-3" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Tab content for home.</div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Tab content for profile.</div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Navbar example">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Progress &amp; spinners</h5>
+            <div class="progress mb-3" role="progressbar" aria-label="Progress example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 50%">50%</div>
+            </div>
+            <div class="d-flex gap-3 align-items-center mb-3">
+              <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+              <div class="spinner-grow text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+            </div>
+            <div class="list-group">
+              <button type="button" class="list-group-item list-group-item-action active" aria-current="true">Active button item</button>
+              <button type="button" class="list-group-item list-group-item-action">Button item</button>
+              <button type="button" class="list-group-item list-group-item-action" disabled>Disabled item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Popovers, tooltips &amp; close buttons</h5>
+            <p class="small text-muted">Initialize tooltips and popovers via <code>bootstrap.Tooltip</code> / <code>bootstrap.Popover</code>. Buttons below are wired on page load.</p>
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip text">Tooltip button</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content">Popover button</button>
+              <button type="button" class="btn btn-outline-dark">
+                Close button
+                <span class="ms-2 align-middle"><span class="btn-close" aria-label="Close"></span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Toasts</h5>
+            <p class="small text-muted">Toasts can be triggered programmatically via <code>bootstrap.Toast</code>. Button below is hooked to show the toast.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <button type="button" class="btn btn-success" id="liveToastBtn">Show toast</button>
+            </div>
+            <div class="toast-container position-static">
+              <div id="styleguideToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <strong class="me-auto">Toast title</strong>
+                  <small class="text-muted">just now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Hello, world! This is a toast message.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Scrollspy</h5>
+            <p class="small text-muted mb-2">Scrollspy requires initialization via <code>bootstrap.ScrollSpy</code>. The example below is wired on page load.</p>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <nav id="scrollspyNav" class="nav flex-column nav-pills">
+                  <a class="nav-link active" href="#scrollspyHeading1">Item 1</a>
+                  <a class="nav-link" href="#scrollspyHeading2">Item 2</a>
+                  <a class="nav-link" href="#scrollspyHeading3">Item 3</a>
+                </nav>
+              </div>
+              <div class="col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#scrollspyNav" data-bs-offset="0" class="styleguide-scrollspy" tabindex="0" id="styleguideScrollspy">
+                  <h6 id="scrollspyHeading1">Item 1</h6>
+                  <p>Some placeholder content for the first scrollspy item.</p>
+                  <h6 id="scrollspyHeading2">Item 2</h6>
+                  <p>Another section of placeholder content to highlight scrollspy behavior.</p>
+                  <h6 id="scrollspyHeading3">Item 3</h6>
+                  <p>Final section to demonstrate the nav updates as you scroll.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.bootstrap) return;
+
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltipTriggerEl) => {
+        bootstrap.Tooltip.getOrCreateInstance(tooltipTriggerEl);
+      });
+
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popoverTriggerEl) => {
+        bootstrap.Popover.getOrCreateInstance(popoverTriggerEl);
+      });
+
+      const toastTrigger = document.getElementById('liveToastBtn');
+      const toastLiveExample = document.getElementById('styleguideToast');
+      if (toastTrigger && toastLiveExample) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+        toastTrigger.addEventListener('click', () => toastBootstrap.show());
+      }
+
+      const scrollspyEl = document.getElementById('styleguideScrollspy');
+      if (scrollspyEl) {
+        bootstrap.ScrollSpy.getOrCreateInstance(scrollspyEl, { target: '#scrollspyNav' });
+      }
+    });
+  </script>
+{% endblock %}

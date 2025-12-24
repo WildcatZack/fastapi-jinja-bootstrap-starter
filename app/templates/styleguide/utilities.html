@@ -1,0 +1,150 @@
+{% extends "styleguide/styleguide_base.html" %}
+
+{% block title %}Styleguide Utilities | FastAPI Starter{% endblock %}
+
+{% block styleguide_header %}
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h1 class="mb-0">Helpers &amp; Utilities</h1>
+    <span class="badge text-bg-secondary">Backgrounds, Borders, Colors, Display, Flex, Spacing, Text</span>
+  </div>
+  <p class="text-muted mb-4">Utility classes for layout, spacing, and helper behaviors.</p>
+{% endblock %}
+
+{% block styleguide_content %}
+  <section class="styleguide-section">
+    <div class="row g-4 mb-4">
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Backgrounds &amp; borders</h5>
+            <div class="p-2 mb-2 bg-primary text-white rounded">Primary background</div>
+            <div class="p-2 mb-2 bg-light border rounded">Light with border</div>
+            <div class="p-2 mb-0 border-start border-5 border-success">Border utilities</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Colors &amp; text</h5>
+            <p class="text-primary mb-1">Primary text</p>
+            <p class="text-success mb-1">Success text</p>
+            <p class="text-danger mb-1">Danger text</p>
+            <p class="text-muted mb-3">Muted text</p>
+            <p class="fw-bold mb-1">Bold text</p>
+            <p class="fst-italic mb-0 text-center text-uppercase">Italic center aligned</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Display &amp; spacing</h5>
+            <div class="d-flex gap-2 mb-3">
+              <span class="p-2 bg-secondary text-white">Flex item</span>
+              <span class="p-2 bg-secondary text-white">Flex item</span>
+            </div>
+            <div class="d-inline-block p-2 bg-info text-white me-2">Inline-block</div>
+            <div class="d-inline-block p-2 bg-info text-white">Inline-block 2</div>
+            <div class="mt-3">
+              <span class="p-2 m-1 bg-light border">m-1</span>
+              <span class="p-2 m-2 bg-light border">m-2</span>
+              <span class="p-2 m-3 bg-light border">m-3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Flex alignment &amp; order</h5>
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="p-2 bg-light border">Start</div>
+              <div class="p-2 bg-light border">Center</div>
+              <div class="p-2 bg-light border">End</div>
+            </div>
+            <div class="d-flex">
+              <div class="order-2 p-2 bg-warning text-dark">Second</div>
+              <div class="order-1 p-2 bg-warning text-dark">First</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Sizing &amp; shadows</h5>
+            <div class="w-25 p-2 bg-light border mb-2">w-25</div>
+            <div class="w-50 p-2 bg-light border mb-2">w-50</div>
+            <div class="w-75 p-2 bg-light border mb-3">w-75</div>
+            <div class="p-3 shadow-sm bg-body">Shadow small</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Position &amp; z-index</h5>
+            <div class="position-relative" style="height: 120px;">
+              <div class="position-absolute top-0 start-0 p-2 bg-primary text-white">Top</div>
+              <div class="position-absolute bottom-0 end-0 p-2 bg-secondary text-white z-1">Bottom</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Overflow &amp; opacity</h5>
+            <div class="overflow-auto border rounded p-2 mb-2" style="max-height: 72px;">
+              <p class="mb-1">Scrollable container</p>
+              <p class="mb-1">More content to overflow</p>
+              <p class="mb-0">Final line</p>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="p-2 bg-success text-white opacity-75">75%</span>
+              <span class="p-2 bg-success text-white opacity-50">50%</span>
+              <span class="p-2 bg-success text-white opacity-25">25%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Interactions &amp; visibility</h5>
+            <p class="mb-2 user-select-none">User-select disabled text</p>
+            <a class="link-secondary pe-none" href="#">Pointer-events disabled link</a>
+            <div class="mt-3">
+              <span class="me-2">Visible</span>
+              <span class="invisible">Invisible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Float &amp; vertical align</h5>
+            <div class="clearfix">
+              <div class="float-start p-2 bg-light border">Float start</div>
+              <div class="float-end p-2 bg-light border">Float end</div>
+            </div>
+            <div class="mt-4">
+              <span class="align-baseline">Baseline</span>
+              <span class="align-top ms-2">Top</span>
+              <span class="align-middle ms-2">Middle</span>
+              <span class="align-bottom ms-2">Bottom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

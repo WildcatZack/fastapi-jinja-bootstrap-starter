@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+  {{ super() }}
+  <style>
+    .styleguide-section + .styleguide-section {
+      margin-top: 3rem;
+    }
+    .styleguide-scrollspy {
+      position: relative;
+      height: 320px;
+      overflow: auto;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {% block styleguide_header %}{% endblock %}
+  {% include "styleguide/_nav.html" %}
+  {% block styleguide_content %}{% endblock %}
+{% endblock %}

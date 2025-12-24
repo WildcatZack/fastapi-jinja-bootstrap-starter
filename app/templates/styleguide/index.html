@@ -1,0 +1,67 @@
+{% extends "styleguide/styleguide_base.html" %}
+
+{% block title %}Styleguide | FastAPI Starter{% endblock %}
+
+{% block styleguide_header %}
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+    <div>
+      <h1 class="mb-1">Bootstrap 5.3.x Styleguide</h1>
+      <p class="lead mb-0">Theme validation pages covering core layout, content, forms, components, and utilities. Use the navbar toggle to flip between default and Kentucky themes.</p>
+    </div>
+    <span class="badge text-bg-info align-self-center">Bootstrap {{ '5.3.x' }}</span>
+  </div>
+{% endblock %}
+
+{% block styleguide_content %}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Table of contents</h5>
+      <div class="row">
+        <div class="col-md-5">
+          <ul class="list-unstyled mb-3">
+            <li><a href="/styleguide/layout">Layout</a></li>
+            <li><a href="/styleguide/content">Content</a></li>
+            <li><a href="/styleguide/forms">Forms</a></li>
+            <li><a href="/styleguide/components">Components</a></li>
+            <li><a href="/styleguide/utilities">Helpers &amp; Utilities</a></li>
+          </ul>
+        </div>
+        <div class="col-md-7">
+          <div class="small text-muted">
+            JavaScript-based components (tooltips, popovers, toasts, scrollspy) rely on the bundled Bootstrap assets already used by the app. No CDN links required.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Layout coverage</h5>
+          <p class="card-text">Containers, grid, gutters, and responsive spacing examples.</p>
+          <a class="btn btn-outline-primary" href="/styleguide/layout">Explore layout</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Content coverage</h5>
+          <p class="card-text">Typography, tables, and media styles that reflect the theme.</p>
+          <a class="btn btn-outline-primary" href="/styleguide/content">Explore content</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Forms &amp; components</h5>
+          <p class="card-text">Form controls, UI components, and utility classes.</p>
+          <a class="btn btn-outline-primary" href="/styleguide/forms">Explore forms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

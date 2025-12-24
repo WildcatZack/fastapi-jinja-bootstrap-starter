@@ -1,0 +1,254 @@
+{% extends "styleguide/styleguide_base.html" %}
+
+{% block title %}Styleguide Forms | FastAPI Starter{% endblock %}
+
+{% block styleguide_header %}
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h1 class="mb-0">Forms</h1>
+    <span class="badge text-bg-secondary">Controls, Layouts, Validation</span>
+  </div>
+  <p class="text-muted mb-4">Core form controls and states used throughout the UI.</p>
+{% endblock %}
+
+{% block styleguide_content %}
+  <section class="styleguide-section">
+    <div class="row g-4 mb-3">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Overview</h5>
+            <p class="card-text">Standard form controls and helper text.</p>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" />
+                <div id="emailHelp" class="form-text">We'll never share your email.</div>
+              </div>
+              <div class="mb-3">
+                <label for="examplePassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="examplePassword" placeholder="Password" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleTextarea" class="form-label">Textarea</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Leave a message"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleDatalist" class="form-label">Datalist</label>
+                <input class="form-control" list="datalistOptions" id="exampleDatalist" placeholder="Type to search..." />
+                <datalist id="datalistOptions">
+                  <option value="San Francisco"></option>
+                  <option value="New York"></option>
+                  <option value="Seattle"></option>
+                  <option value="Austin"></option>
+                </datalist>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Selects, checks &amp; radios</h5>
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="exampleSelect">Select menu</label>
+                <select class="form-select" id="exampleSelect">
+                  <option>Choose...</option>
+                  <option>First</option>
+                  <option>Second</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="exampleSelectMultiple">Multiple select</label>
+                <select class="form-select" id="exampleSelectMultiple" multiple>
+                  <option>Alpha</option>
+                  <option>Beta</option>
+                  <option>Gamma</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked />
+                  <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled />
+                  <label class="form-check-label" for="flexCheckDisabled">Disabled checkbox</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" checked />
+                  <label class="form-check-label" for="flexRadio1">First radio</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" />
+                  <label class="form-check-label" for="flexRadio2">Second radio</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="customRange1" class="form-label">Range</label>
+                <input type="range" class="form-range" id="customRange1" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-3">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Input groups</h5>
+            <div class="mb-3">
+              <label class="form-label" for="inputGroup1">Username</label>
+              <div class="input-group" id="inputGroup1">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="inputGroup2">Amount</label>
+              <div class="input-group" id="inputGroup2">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+            <div class="mb-0">
+              <label class="form-label" for="inputGroup3">With button</label>
+              <div class="input-group" id="inputGroup3">
+                <button class="btn btn-outline-secondary" type="button">Go</button>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Floating labels &amp; layout</h5>
+            <form class="row g-3">
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Email address</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                  <label for="floatingPassword">Password</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                  </select>
+                  <label for="floatingSelect">Select menu</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row gy-2 gx-3 align-items-center">
+                  <div class="col-sm-5">
+                    <label class="visually-hidden" for="inlineFormInputName">Name</label>
+                    <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe" />
+                  </div>
+                  <div class="col-sm-5">
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Validation</h5>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-12">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationCustom03" required />
+                <div class="invalid-feedback">Please provide a valid city.</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                  <label class="form-check-label" for="invalidCheck">Agree to terms</label>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Form text &amp; disabled states</h5>
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Disabled input</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" disabled />
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">File input</label>
+              <input class="form-control" type="file" id="formFile" />
+            </div>
+            <div class="mb-3 form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+              <label class="form-check-label" for="flexSwitchCheckDefault">Switch toggle</label>
+            </div>
+            <div class="mb-3">
+              <label for="exampleColorInput" class="form-label">Color picker</label>
+              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" />
+            </div>
+            <div class="row g-2 align-items-center">
+              <div class="col-auto">
+                <label for="formControlSm" class="col-form-label">Sizing</label>
+              </div>
+              <div class="col">
+                <input class="form-control form-control-sm" id="formControlSm" type="text" placeholder="Small input" />
+              </div>
+              <div class="col">
+                <input class="form-control form-control-lg" id="formControlLg" type="text" placeholder="Large input" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

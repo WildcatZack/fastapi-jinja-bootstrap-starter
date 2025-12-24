@@ -1,0 +1,62 @@
+{% extends "styleguide/styleguide_base.html" %}
+
+{% block title %}Styleguide Layout | FastAPI Starter{% endblock %}
+
+{% block styleguide_header %}
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h1 class="mb-0">Layout</h1>
+    <span class="badge text-bg-secondary">Containers, Grid, Gutters</span>
+  </div>
+  <p class="text-muted mb-4">Responsive layout primitives for the grid system, containers, and spacing scale.</p>
+{% endblock %}
+
+{% block styleguide_content %}
+  <section class="styleguide-section">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Containers</h5>
+            <p class="card-text">Responsive container widths.</p>
+            <div class="mb-2 p-3 border rounded">.container</div>
+            <div class="mb-2 p-3 border rounded bg-light">.container-sm</div>
+            <div class="p-3 border rounded">.container-fluid</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Grid basics</h5>
+            <p class="card-text">Equal columns with the responsive grid.</p>
+            <div class="row text-center g-2">
+              <div class="col"><div class="p-3 bg-primary text-white rounded">1 of 3</div></div>
+              <div class="col"><div class="p-3 bg-primary text-white rounded">2 of 3</div></div>
+              <div class="col"><div class="p-3 bg-primary text-white rounded">3 of 3</div></div>
+            </div>
+            <div class="row text-center g-2 mt-2">
+              <div class="col-6"><div class="p-3 bg-secondary text-white rounded">col-6</div></div>
+              <div class="col-6"><div class="p-3 bg-secondary text-white rounded">col-6</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Responsive grid &amp; gutters</h5>
+            <p class="card-text">Gutter spacing paired with breakpoint columns.</p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+              <div class="col"><div class="p-3 border rounded">Auto</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

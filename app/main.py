@@ -37,6 +37,46 @@ def read_docs(request: Request):
 @app.get("/styleguide", response_class=HTMLResponse)
 def read_styleguide(request: Request):
     return templates.TemplateResponse(
-        "styleguide.html",
-        {"request": request, "active_page": "styleguide"},
+        "styleguide/index.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "index"},
+    )
+
+
+@app.get("/styleguide/layout", response_class=HTMLResponse)
+def read_styleguide_layout(request: Request):
+    return templates.TemplateResponse(
+        "styleguide/layout.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "layout"},
+    )
+
+
+@app.get("/styleguide/content", response_class=HTMLResponse)
+def read_styleguide_content(request: Request):
+    return templates.TemplateResponse(
+        "styleguide/content.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "content"},
+    )
+
+
+@app.get("/styleguide/forms", response_class=HTMLResponse)
+def read_styleguide_forms(request: Request):
+    return templates.TemplateResponse(
+        "styleguide/forms.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "forms"},
+    )
+
+
+@app.get("/styleguide/components", response_class=HTMLResponse)
+def read_styleguide_components(request: Request):
+    return templates.TemplateResponse(
+        "styleguide/components.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "components"},
+    )
+
+
+@app.get("/styleguide/utilities", response_class=HTMLResponse)
+def read_styleguide_utilities(request: Request):
+    return templates.TemplateResponse(
+        "styleguide/utilities.html",
+        {"request": request, "active_page": "styleguide", "styleguide_section": "utilities"},
     )
