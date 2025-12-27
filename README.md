@@ -1,15 +1,19 @@
-# fastapi-jinja-bootstrap-starter
+# FastAPI Starter
 
 ## Quick start
-1. Install dependencies:
+1. Create your local environment file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-2. Run the development server:
+3. Run the development server:
    ```bash
    uvicorn app.main:app --reload
    ```
-3. Open http://127.0.0.1:8000/ in your browser.
+4. Open http://127.0.0.1:8000/ in your browser.
 
 ## UI proof
 
